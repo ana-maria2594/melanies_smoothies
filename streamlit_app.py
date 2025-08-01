@@ -52,3 +52,9 @@ if time_to_insert:
     st.write(my_insert_stmt)  # This line is indented correctly
     session.sql(my_insert_stmt).collect()
     st.success('Your Smoothie is ordered!', icon="✅")
+
+#new section to display smoothiefrot nutrition information
+
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
