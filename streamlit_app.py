@@ -12,7 +12,9 @@ st.write(
   [docs.streamlit.io](https://docs.streamlit.io).
   """
 )
-cnx = st.connection("snowflake")
+#cnx = st.connection("snowflake")
+cnx = st.connection("snowflake", type="snowflake")
+
 
 name_on_order = st.text_input("Name on Smoothie")
 st.write('The name on your Smoothie will be:', name_on_order)
